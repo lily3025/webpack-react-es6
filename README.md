@@ -13,78 +13,9 @@
 
 	6. 安装react，执行命令： npm install react react-dom --save-dev
 
-	7. 到此主要模块已经安装完成，接下来进行文件配置， webpack.config.js文件是必须的，文件配置内容示例如下：
-var path = require('path');
-var webpack = require('webpack');
-module.exports = {
-    /*devtool: 'eval-source-map',*/
-    entry: [path.resolve(__dirname, './dev/main.jsx')],
-    output: {
-        path: path.resolve(__dirname, './build'),
-        filename: 'bundle.jsx'
-    },
-    module: {
-        loaders: [
-            {
-                test: /\.jsx?$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'babel',
-                query: {
-                        presets: ['es2015', 'react']
-                }
-            },
-            {
-                test: /\.css$/,
-                loader: 'style!css'
-            },
-            {
-                test:/\.(png)|(jpg)$/,
-                loader: "url?limit=50000"
-            }
-        ]
-    },
-    /*
-    plugins: [
-        new webpack.HotModuleReplacementPlugin(),
-    ],*/
-    devServer: {
-        colors: true,
-        historyApiFallback: true,
-        inline: true,
-    }
-};
+	7. 到此主要模块已经安装完成，接下来进行文件配置， webpack.config.js文件是必须的，文件配置内容见代码：
 
-	8. package.json的代码示例如下   
-{
-  "name": "webpackReact",
-  "version": "1.0.0",
-  "description": "图谱审核平台",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "start": "webpack --watch",
-    "dev": "webpack-dev-server --inline --hot --no-info --port 3001"
-  },
-  "author": "liulili",
-  "license": "ISC",
-  "devDependencies": {
-    "babel-core": "^6.14.0",
-    "babel-loader": "^6.2.5",
-    "babel-plugin-react-transform": "^2.0.2",
-    "babel-preset-es2015": "^6.14.0",
-    "babel-preset-react": "^6.11.1",
-    "css-loader": "^0.24.0",
-    "md5": "^2.2.1",
-    "react": "^15.3.1",
-    "react-dom": "^15.3.1",
-    "react-transform-hmr": "^1.0.4",
-    "style-loader": "^0.13.1",
-    "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.15.1"
-  }
-}
+	8. package.json内容见代码  
                                                                                        
 	9. html中引用bundle.js，可以在代码中写一些效果，然后运行npm start  就可以看到效果 （npm的start是一个特殊的脚本名称，它的特殊性表现在，在命令行中使用npm start就可以执行相关命令，如果对应的此脚本名称不是start，想要在命令行中运行时，需要这样用npm run {script name}如npm run build ）
 

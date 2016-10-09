@@ -10,8 +10,8 @@
 
 	4. 接下来开始安装node模块，先安装webpack，执行命令：npm install webpack --save-dev
 
-	5. 然后安装webpack需要的加载器，执行命令： npm install babel-loader babel-preset-es2015 babel-preset-react --save-dev 
-	   (解析jsx和es6的语法)
+	5. 然后安装webpack需要的加载器(解析jsx和es6的语法)，执行命令： 
+	   npm install babel-loader babel-preset-es2015 babel-preset-react --save-dev    
 
 	6. 安装react，执行命令： npm install react react-dom --save-dev
 
@@ -23,10 +23,10 @@
 	 （npm的start是一个特殊的脚本名称，它的特殊性表现在，在命令行中使用npm start就可以执行相关命令，
 	  如果对应的此脚本名称不是start，想要在命令行中运行时，需要这样用npm run {script name}如npm run build ）
 
-	10. tips： 1.  如果因为网络原因安装不成功，可以在npm install命令时添加
+	10. tips： 1.如果因为网络原因安装不成功，可以在npm install命令时添加
 	           --registry=http://registry.npm.qiwoo.org参数  
-		   （详细介绍c地址  http://qnpm.qiwoo.org/help/download?sid=9015953b291768f14c980bdbe3ffaa07）   
-           2.  需要用到的其他模块的安装 npm install css-loader style-loader （css样式需要的loader）     
+	（详细介绍c地址  http://qnpm.qiwoo.org/help/download?sid=9015953b291768f14c980bdbe3ffaa07）   
+                   2.需要用到的其他模块的安装 npm install css-loader style-loader（css样式需要的loader）     
                                     npm install url-loader （url解析需要的loader）   
                                     npm i md5 --save-dev  （md5模块安装）
 

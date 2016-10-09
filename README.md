@@ -1,4 +1,4 @@
-# webpack-react-es6
+# webpack+react+es6
 环境安装与配置参考步骤   
 
 	1. node和npm是基础，node下载地址https://nodejs.org，为了能支持es6请下载4.0以上版本，新的node版本
